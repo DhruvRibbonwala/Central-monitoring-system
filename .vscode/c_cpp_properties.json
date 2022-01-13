@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/dhruv/ws_moveit/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/dhruv/ws2/src/f1/include/**",
+        "/home/dhruv/ws_moveit/src/pkg_ros_basics/include/**",
+        "/home/dhruv/ws2/src/r1/include/**",
+        "/home/dhruv/ws_moveit/src/rosserial/rosserial_server/include/**",
+        "/home/dhruv/ws_moveit/src/rosserial/rosserial_test/include/**",
+        "/home/dhruv/ws2/src/swr2/include/**",
+        "/home/dhruv/ws2/src/wr1/include/**",
+        "/home/dhruv/ws2/src/wr2/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

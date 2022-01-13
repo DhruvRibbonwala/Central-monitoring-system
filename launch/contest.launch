@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="headless" value="$(arg headless)"/>
+        <arg name="world_name" value="$(find f1)/worlds/arena.world"/>
+    </include>
+
+    <group ns='r1'>
+        <arg name="model" value="$(find f1)/urdf/r1.urdf.xacro"/>
+        <arg name="init_pose" value="-x 0.0 -y 0 -Y 0.0" />
+        <rosparam command="load" file="$(find f1)/config/r1con.yaml"/>
+        <!-- <rosparam command="load" file="$(find f1)/config/r1gains.yaml"/> -->
+        <param name='robot_description' command="xacro --inorder '$(arg model)'"/>
+        <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="$(arg init_pose) -urdf -model r1 -param robot_description" />
+        <node name="r1_con" pkg="controller_manager" type="spawner" args="r1/vel_controller" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"></node>
+        <node  name='r1connode' pkg='f1' type='r1connode.py' output='screen' />
+        <!-- <node name='lognode' pkg='f1' type='lognode.py' output='screen' /> -->
+    </group>
+
+    <group ns='r2'>
+        <arg name="model" value="$(find f1)/urdf/r2.urdf.xacro"/>
+        <arg name="init_pose" value="-x -0.0 -y 0.1524 -Y 0.785 " />
+        <rosparam command="load" file="$(find f1)/config/r2con.yaml"/>
+        <param name='robot_description' command="xacro --inorder '$(arg model)'"/>
+        <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="$(arg init_pose) -urdf -model r2 -param robot_description" />
+        <node name="r2_con" pkg="controller_manager" type="spawner" args="r2/vel_controller" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"></node>
+        <node  name='r2connode' pkg='f1' type='r2connode.py' output='screen' />
+    </group>
+
+    <group ns='r3'>
+        <arg name="model" value="$(find f1)/urdf/r3.urdf.xacro"/>
+        <arg name="init_pose" value="-x 0.0 -y 0.3048 -Y 0.785" />
+        <rosparam command="load" file="$(find f1)/config/r3con.yaml"/>
+        <param name='robot_description' command="xacro --inorder '$(arg model)'"/>
+        <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="$(arg init_pose) -urdf -model r3 -param robot_description" />
+        <node name="r3_con" pkg="controller_manager" type="spawner" args="r3/vel_controller" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"></node>
+        <node  name='r3connode' pkg='f1' type='r3connode.py' output='screen' />
+    </group>
+
+    <group ns='r4'>
+        <arg name="model" value="$(find f1)/urdf/r4.urdf.xacro"/>
+        <arg name="init_pose" value="-x 0.0 -y 0.4572 -Y 0.785" />
+        <rosparam command="load" file="$(find f1)/config/r4con.yaml"/>
+        <param name='robot_description' command="xacro --inorder '$(arg model)'"/>
+        <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="$(arg init_pose) -urdf -model r4 -param robot_description" />
+        <node name="r4_con" pkg="controller_manager" type="spawner" args="r4/vel_controller" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"></node>
+        <node  name='r4connode' pkg='f1' type='r4connode.py' output='screen' />
+    </group>
+
+    <!-- <node name='lognode' pkg='f1' type='lognode.py' output='screen' /> -->
+    <node name='visiontestnode' pkg='f1' type='visiontestnode.py' output='screen' />
+    <node name='waypointstest' pkg='f1' type='waypointstest.py' output='screen' />
+</launch>

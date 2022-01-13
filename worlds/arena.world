@@ -1,0 +1,704 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="arena">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    
+    <!-- Dummy base-->
+    <model name="base">
+    <pose>0.6858 0.2286 0 0 0 0</pose>
+    <static>true</static>
+    <link name="base">
+        <visual name="base">
+        <geometry>
+            <box>
+            <size>3.048 3.048 0.001</size>
+            </box>
+        </geometry>
+        <!-- <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material> -->
+        </visual>
+    </link>
+    </model>
+
+    <!-- W1-->
+    <model name="box_W1">
+    <pose>1.2954 -1.1430 0.0 0 0 0</pose>
+    <static>true</static>
+    <link name="link_W1">
+        <collision name="collision_W1">
+        <geometry>
+            <box>
+            <size>0.3048 0.001 0.0254</size>
+            </box>
+        </geometry>
+        </collision>
+        <visual name="visual_W1">
+        <geometry>
+            <box>
+            <size>0.3048 0.001 0.0254</size>
+            </box>
+        </geometry>
+        <material>
+            <script>Gazebo/WoodPallet</script>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- W2-->
+    <model name="box_W2">
+    <pose>1.2954 1.6002 0 0 0 0</pose>
+    <static>true</static>
+    <link name="link_W2">
+        <collision name="collision_W2">
+        <geometry>
+            <box>
+            <size>0.3048 0.001 0.0254</size>
+            </box>
+        </geometry>
+        </collision>
+        <visual name="visual_W2">
+        <geometry>
+            <box>
+            <size>0.3048 0.001 0.0254</size>
+            </box>
+        </geometry>
+        <material>
+            <script>Gazebo/WoodPallet</script>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL1-->
+    <model name="box_VL1">
+    <pose>0.6858 0.0762 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL1">
+        <visual name="visual_VL1">
+        <geometry>
+            <box>
+            <size>1.524 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>1 1 0.5 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL2-->
+    <model name="box_VL2">
+    <pose>0.6858 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL2">
+        <visual name="visual_VL2">
+        <geometry>
+            <box>
+            <size>1.524 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+    
+    <!-- VL3-->
+    <model name="box_VL3">
+    <pose>0.6858 0.3810 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL3">
+        <visual name="visual_VL3">
+        <geometry>
+            <box>
+            <size>1.524 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL4-->
+    <model name="box_VL4">
+    <pose>1.2954 -0.9906 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL4">
+        <visual name="visual_VL4">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL5-->
+    <model name="box_VL5">
+    <pose>1.2954 -0.8382 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL5">
+        <visual name="visual_VL5">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL6-->
+    <model name="box_VL6">
+    <pose>1.2954 -0.6858 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL6">
+        <visual name="visual_VL6">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL7-->
+    <model name="box_VL7">
+    <pose>1.2954 -0.5334 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL7">
+        <visual name="visual_VL7">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL8-->
+    <model name="box_VL8">
+    <pose>1.2954 -0.3810 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL8">
+        <visual name="visual_VL8">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL9-->
+    <model name="box_VL9">
+    <pose>1.2954 -0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL9">
+        <visual name="visual_VL9">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL10-->
+    <model name="box_VL10">
+    <pose>0.6858 -0.0762 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL10">
+        <visual name="visual_VL10">
+        <geometry>
+            <box>
+            <size>1.524 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL11-->
+    <model name="box_VL11">
+    <pose>0.6858 0.5334 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL11">
+        <visual name="visual_VL11">
+        <geometry>
+            <box>
+            <size>1.524 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL12-->
+    <model name="box_VL12">
+    <pose>1.2954 0.6858 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL12">
+        <visual name="visual_VL12">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL13-->
+    <model name="box_VL13">
+    <pose>1.2954 0.8382 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL13">
+        <visual name="visual_VL13">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL14-->
+    <model name="box_VL14">
+    <pose>1.2954 0.9906 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL14">
+        <visual name="visual_VL14">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL15-->
+    <model name="box_VL15">
+    <pose>1.2954 1.143 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL15">
+        <visual name="visual_VL15">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL16-->
+    <model name="box_VL16">
+    <pose>1.2954 1.2954 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL16">
+        <visual name="visual_VL16">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- VL17-->
+    <model name="box_VL17">
+    <pose>1.2954 1.4478 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_VL17">
+        <visual name="visual_VL17">
+        <geometry>
+            <box>
+            <size>0.3048 0.01 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL0-->
+    <model name="box_HL0">
+    <pose>1.4478 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL0">
+        <visual name="visual_HL0">
+        <geometry>
+            <box>
+            <size>0.01 3.048 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL1-->
+    <model name="box_HL1">
+    <pose>1.2954 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL1">
+        <visual name="visual_HL1">
+        <geometry>
+            <box>
+            <size>0.01 3.048 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL2-->
+    <model name="box_HL2">
+    <pose>1.143 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL2">
+        <visual name="visual_HL2">
+        <geometry>
+            <box>
+            <size>0.01 3.048 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+    
+    <!-- HL3-->
+    <model name="box_HL3">
+    <pose>0.9906 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL3">
+        <visual name="visual_HL3">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL4-->
+    <model name="box_HL4">
+    <pose>0.8382 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL4">
+        <visual name="visual_HL4">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL5-->
+    <model name="box_HL5">
+    <pose>0.6858 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL5">
+        <visual name="visual_HL5">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL6-->
+    <model name="box_HL6">
+    <pose>0.5334 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL6">
+        <visual name="visual_HL6">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL7-->
+    <model name="box_HL7">
+    <pose>0.3810 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL7">
+        <visual name="visual_HL7">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL8-->
+    <model name="box_HL8">
+    <pose>0.2286 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL8">
+        <visual name="visual_HL8">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL9-->
+    <model name="box_HL9">
+    <pose>0.0762 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL9">
+        <visual name="visual_HL9">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- HL10-->
+    <model name="box_HL10">
+    <pose>-0.0762 0.2286 0.001 0 0 0</pose>
+    <static>true</static>
+    <link name="link_HL10">
+        <visual name="visual_HL10">
+        <geometry>
+            <box>
+            <size>0.01 0.6096 0.001</size>
+            </box>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+            <specular>0 0 0 0</specular>
+            <emissive>0 1 0 1</emissive>
+        </material>
+        </visual>
+    </link>
+    </model>
+
+    <!-- Camera-->
+    
+    <model name="camera_1">
+    <static>true</static>
+    <pose>0.6858 0.2286 3.5 0 1.57 0</pose>
+    <link name="camera_link_1">
+        <visual name="camera_visual_1">
+            <geometry>
+                <box size="0.02 0.02 0.02"/>
+            </geometry>
+        </visual>
+        <sensor name='camera_1' type='camera'>
+            <camera>
+                <save enabled="true">
+                    <path>/home/dhruv/cv/sim3</path>
+                </save>
+                <horizontal_fov>1.047</horizontal_fov>
+                <image>
+                    <width>1000</width>
+                    <height>500</height>
+                </image>
+                <clip>
+                    <near>0.1</near>
+                    <far>100</far>
+                </clip>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>2</update_rate>
+        </sensor>
+    </link>
+    </model>
+   
+  </world>
+</sdf>

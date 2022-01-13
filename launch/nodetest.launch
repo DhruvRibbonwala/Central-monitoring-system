@@ -1,0 +1,5 @@
+<launch>
+    <node name='vision_node' pkg='f1' type='vision_node.py' output='screen' />
+    <node name='waypoints' pkg='f1' type='waypoints.py' output='screen' />
+    <node name='debugsubs' pkg='f1' type='debugsubs.py' output='screen' />
+</launch>
